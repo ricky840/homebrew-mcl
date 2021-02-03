@@ -28,10 +28,10 @@ class Mcl < Formula
 
   def install
     ohai "installing..hello"
-    bin.install "hello/mcl"
+    bin.install "mcl.rb" => "mcl"
   end
 
   test do
-    # system bin/"mcl", "-h"
+    system "#{bin}/mcl", "-h"
   end
 end
