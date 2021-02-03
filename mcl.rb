@@ -32,6 +32,6 @@ class Mcl < Formula
   end
 
   test do
-    system "#{bin}/mcl", "-h"
+    system /"mcl", "-h"
   end
 end
