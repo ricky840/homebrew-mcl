@@ -2,7 +2,7 @@ class Mcl < Formula
   desc "Test"
   homepage "https://origin-sfo.datswatsup.com"
   url "https://raw.githubusercontent.com/ricky840/mChangeLog/main/mcl.rb"
-  version "0.0.1"
+  version "0.0.2"
   sha256 "0a57a31ad14ab3dd49afb5b5c265f4e1f08ee47a63d096c08f7de7a2361a045d"
   license "MIT"
 
