@@ -28,7 +28,7 @@ class Mcl < Formula
 
   def install
     ohai "installing.."
-    bin.install "mcl"
+    bin.install "hello/mcl"
   end
 
   test do
