@@ -2,7 +2,7 @@ class Mcl < Formula
   desc "Test"
   homepage "https://origin-sfo.datswatsup.com"
   url "https://raw.githubusercontent.com/ricky840/mChangeLog/main/mcl.rb"
-  version "0.0.2"
+  version "0.0.3"
   sha256 "0a57a31ad14ab3dd49afb5b5c265f4e1f08ee47a63d096c08f7de7a2361a045d"
   license "MIT"
 
@@ -27,7 +27,7 @@ class Mcl < Formula
   end
 
   def install
-    ohai "installing..hello"
+    ohai "installing..hello2"
     bin.install "mcl.rb" => "mcl"
   end
 
