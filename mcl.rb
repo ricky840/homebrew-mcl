@@ -28,7 +28,16 @@ class Mcl < Formula
 
   def install
     ohai "Thanks for installing, please wait.."
-    bin.install "mcl.rb" => "mcl"
+
+    ENV["GEM_HOME"] = libexec
+
+    resources.each do |r|
+      r.fetch
+      system "gem", "install", r.cached_download, "--ignore-dependencies", "--no-document", "--install-dir", libexec
+    end
+
+    bin.install libexec/"bin/mcl"
+    bin.env_script_all_files(libexec/"bin", :GEM_HOME => ENV["GEM_HOME"])
   end
 
   test do
