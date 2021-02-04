@@ -17,8 +17,8 @@ class Mcl < Formula
   end
 
   resource "racc" do
-    url "https://rubygems.org/downloads/racc-1.5.2.gem"
-    sha256 "2f48a44974ebc6b724f763f546a57706bbbeff571b7e1cf7d50919db413e139d"
+    url "https://rubygems.org/downloads/racc-1.5.2-java.gem"
+    sha256 "110bbf9cd6f26eea22852fe112e251394dffac17268ac0c995df8798e6741b87"
   end
 
   resource "nokogiri" do
