@@ -17,8 +17,8 @@ class Mcl < Formula
   end
 
   resource "nokogiri" do
-    url "https://rubygems.org/downloads/nokogiri-1.11.1.gem"
-    sha256 "42c2a54dd3ef03ef2543177bee3b5308313214e99f0d1aa85f984324329e5caa"
+    url "https://rubygems.org/downloads/nokogiri-1.11.1-x86_64-darwin.gem"
+    sha256 "5c26111f7f26831508cc5234e273afd93f43fbbfd0dcae5394490038b88d28e7"
   end
 
   resource "terminal-table" do
