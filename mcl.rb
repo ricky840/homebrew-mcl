@@ -16,6 +16,11 @@ class Mcl < Formula
     sha256 "f556d4224c812e371000f12a6ee8102e0daa724a314c3f246afaad76d82accc7"
   end
 
+  resource "racc" do
+    url "https://rubygems.org/downloads/racc-1.5.2.gem"
+    sha256 "2f48a44974ebc6b724f763f546a57706bbbeff571b7e1cf7d50919db413e139d"
+  end
+
   resource "nokogiri" do
     url "https://rubygems.org/downloads/nokogiri-1.11.1-x86_64-darwin.gem"
     sha256 "5c26111f7f26831508cc5234e273afd93f43fbbfd0dcae5394490038b88d28e7"
