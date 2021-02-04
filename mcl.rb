@@ -1,9 +1,9 @@
 class Mcl < Formula
-  desc "Test"
+  desc "To help looking up MoPub Adapter Change Logs"
   homepage "https://origin-sfo.datswatsup.com"
   url "https://raw.githubusercontent.com/ricky840/mChangeLog/main/mcl.rb"
-  version "0.0.3"
-  sha256 "0a57a31ad14ab3dd49afb5b5c265f4e1f08ee47a63d096c08f7de7a2361a045d"
+  version "1.0.0"
+  sha256 "04035fa198d65705935193ce7fb8ecec5488e077a4a90320fad6886bd57b3350"
   license "MIT"
 
   resource "rainbow" do
@@ -27,7 +27,7 @@ class Mcl < Formula
   end
 
   def install
-    ohai "installing..hello2"
+    ohai "Thanks for installing, please wait.."
     bin.install "mcl.rb" => "mcl"
   end
 
