@@ -6,6 +6,8 @@ class Mcl < Formula
   sha256 "04035fa198d65705935193ce7fb8ecec5488e077a4a90320fad6886bd57b3350"
   license "MIT"
 
+  depends_on "ruby@2.7"
+
   resource "rainbow" do
     url "https://rubygems.org/downloads/rainbow-3.0.0.gem"
     sha256 "13ce4ffc3c94fb7a842117ecabdcdc5ff7fa27bec15ea44137b9f9abe575622d"
@@ -14,11 +16,6 @@ class Mcl < Formula
   resource "word_wrap" do
     url "https://rubygems.org/downloads/word_wrap-1.0.0.gem"
     sha256 "f556d4224c812e371000f12a6ee8102e0daa724a314c3f246afaad76d82accc7"
-  end
-
-  resource "racc" do
-    url "https://rubygems.org/downloads/racc-1.5.2-java.gem"
-    sha256 "110bbf9cd6f26eea22852fe112e251394dffac17268ac0c995df8798e6741b87"
   end
 
   resource "nokogiri" do
@@ -31,6 +28,11 @@ class Mcl < Formula
     sha256 "287a95f4853452ea464bc4193debf8ea44ff84bf127d9021455ca16e65538ab6"
   end
 
+  resource "unicode-display_width" do
+    url "https://rubygems.org/downloads/unicode-display_width-1.7.0.gem"
+    sha256 "cad681071867a4cf52613412e379e39e85ac72b1d236677a2001187d448b231a"
+  end
+
   def install
     ohai "Installing.."
 
@@ -40,8 +42,8 @@ class Mcl < Formula
     end
 
     ENV["GEM_HOME"] = libexec
-    bin.install "mcl.rb" => "mcl"
-    bin.env_script_all_files(bin/"exec", :GEM_HOME => ENV["GEM_HOME"])
+    bin.install "mcl.rb" => "mcl_s"
+    (bin/"mcl").write_env_script Formula["ruby@2.7"].opt_bin/"ruby", "#{bin}/mcl_s", :GEM_HOME => ENV["GEM_HOME"]
   end
 
   test do
